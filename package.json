@@ -1,0 +1,16 @@
+{
+  "name": "WeatherForecast",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@typespec/compiler": "latest",
+    "@typespec/lint": "^0.43.0",
+    "@typespec/openapi3": "latest",
+    "@typespec/rest": "latest"
+  },
+  "scripts": {
+    "start": "tsp compile .",
+    "build": "tsp compile ."
+  },
+  "private": true
+}
