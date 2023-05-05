@@ -10,7 +10,6 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
-    
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -48,6 +47,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
+        dotnet-version: [6.0.x]
     steps:
       - uses: actions/download-artifact@v3
         name: download artifact
@@ -55,6 +55,12 @@ jobs:
           name: my-artifact-openapi
       - name: Test artifact download
         run: ls -R
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Kioata create client
+        run: kiota generate -l csharp -d ./@typespec/openapi3/openapi.v1.yaml -c GetUserApiClient -n TypeSpec.ApiClient -o ./Client
   release-to-apim:
     runs-on: ubuntu-latest
     needs: build-project
