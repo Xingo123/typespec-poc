@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact-openapi
-          path: /home/runner/work/typespec-implementation/typespec-implementation/tsp-output/
+          path: /home/runner/work/typespec-poc/typespec-poc/tsp-output/
           retention-days: 5
   release-project:
     runs-on: ubuntu-latest
