@@ -82,5 +82,5 @@ jobs:
           azcliversion: 2.48.1
           inlineScript: |
             az config set extension.use_dynamic_install=yes_without_prompt
-            az apim api import --path TypeSpec --resource-group typespec-apim-rg --service-name TypeSpec --specification-path "/@typespec/openapi3/openapi.v1.yaml" --specification-format "OpenApi" --api-type http --display-name "TypeSpec" --api-id TypeSpecApp
+            az apim api import --path TypeSpec --resource-group typespec-apim-rg --service-name typespec-xingo123-apim --specification-path "/@typespec/openapi3/openapi.v1.yaml" --specification-format "OpenApi" --api-type http --display-name "TypeSpec" --api-id TypeSpecApp
             
