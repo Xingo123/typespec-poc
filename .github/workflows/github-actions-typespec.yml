@@ -50,7 +50,7 @@ jobs:
         node-version: [18.x]
     steps:
       - uses: actions/download-artifact@v3
-        name: download
+        name: download artifact
         with: 
           name: my-artifact-openapi
       - name: Test artifact download
