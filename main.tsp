@@ -38,6 +38,7 @@ model Widget {
 @route("/weather-forecasts")
 @tag("WeatherForecasts")
 @friendlyName("WeatherForecasts")
+@inspectTypeName("WeatherForecasts")
 interface WeatherForecastInterface extends ResourceInterface<WeatherForecast> {
 
 }
